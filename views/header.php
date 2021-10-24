@@ -2,44 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="<?php echo constant('URL') ?>public/img/icon.ico">
     <title>ME</title>
-    <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/default.css">
 </head>
 <body>
-    <div id="header">
-        <ul>
-            <li><a href="<?php echo constant('URL') ?>main">Inicio</a></li>
-            <li><a href="<?php echo constant('URL') ?>consulta">Sobre nosotros</a></li>
-            <li><a href="<?php echo constant('URL') ?>ayuda">Contactos</a></li>
-            <?php
-            if(isset($_SESSION['rol'])){
-                if($_SESSION['rol'] == 'cliente'){
-                    ?>
-            <li><a href="<?php echo constant('URL') ?>citas">Citas</a></li>
+    <nav class="navbar navbar-expand-sm navbar-dark p-0 flex-column" style="background-color: #174982;">
+            <a class="navbar-brand" href="<?php echo constant('URL') ?>main">
+                <img src="<?php echo constant('URL') ?>public/img/ME.png" alt="" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav pb-3">
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>main">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>consulta">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>ayuda">Contactos</a></li>
                     <?php
-                }elseif($_SESSION['rol'] == 'psicologo'){
-                    ?>
-            <li><a href="<?php echo constant('URL') ?>citas">Citas</a></li>
-            <li><a href="<?php echo constant('URL') ?>programacion">Programar citas</a></li>
+                if(isset($_SESSION['rol'])){
+                    if($_SESSION['rol'] == 'cliente'){
+                        ?>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>citas">Citas</a></li>
                     <?php
-                }
-                if($_SESSION['rol'] != '' || $_SESSION['rol'] == 'cliente' || $_SESSION['rol'] == 'psicologo' || $_SESSION['rol'] == 'admin'){
-                    ?>
-            <li><a href="<?php echo constant('URL') ?>main/logout">Cerrar sesion</a></li>
+                    }elseif($_SESSION['rol'] == 'psicologo'){
+                        ?>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>citas">Citas</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>programacion">Programar citas</a></li>
                     <?php
-                }
-            }else{
+                    }
+                    if($_SESSION['rol'] != '' || $_SESSION['rol'] == 'cliente' || $_SESSION['rol'] == 'psicologo' || $_SESSION['rol'] == 'admin'){
+                        ?>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>main/logout">Cerrar sesion</a></li>
+                    <?php
+                    }
+                }else{
                     ?>
-            <li><a href="<?php echo constant('URL') ?>registrarcliente">Registrarse</a></li>
-            <li><a href="<?php echo constant('URL') ?>login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>registrarcliente">Registrarse</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>login">Login</a></li>
                     
-            <?php
-            }
-            ?>
-            
-        </ul>
-    </div>
+                    <?php
+                }
+                ?>
+                
+                </ul>
+            </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?php echo constant('URL') ?>public/img/icon.ico">
 </head>
 <body>
     <?php require 'views/header.php' ?>
 
-    <div id="main">
-        <h1 class="center">Citas realizadas</h1>
-        <?php
-        foreach($this->citasobservadas as $row){
-            $citas = new Cita;
-            $citas = $row;
-        ?>
-        <div class="center">
-            <p>Id cita: <?php echo $citas->idcitaprogramada; ?></p>
-            <p>Duracion: <?php echo $citas->duracion; ?></p>
-            <p><?php 
-                #echo $citas->cliente;
-                foreach($this->clientes as $rowc){
-                    $cliente = new Cliente;
-                    $cliente = $rowc;
-                    if($cliente->documentoId == $citas->cliente){
-                        echo 'Cliente: '.$cliente->nombres.' '.$cliente->apellidos;
-                    }
-                }
-                ?></p>
-            <p><?php 
-                #echo $citas->cliente;
-                foreach($this->psicologos as $rowp){
-                    $psicologo = new Psicologo;
-                    $psicologo = $rowp;
-                    if($psicologo->documentoId == $citas->psicologo){
-                        echo 'Psicologo: '.$psicologo->nombres.' '.$psicologo->apellidos;
-                    }
-                }
-                ?></p>
-            <p>Fecha expedicion: <?php $fecha = explode(' ',$citas->fecha); echo $fecha[0] ?></p>
-            <p>Observacion: <?php echo $citas->observacion ?></p>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-sm-4">
+                <h1>Citas con observacion</h1>
+            </div>
         </div>
-        <?php } ?>
+        <div class="row">
+            <div class="col-sm-12">
+                    <?php
+                    foreach($this->citasobservadas as $row){
+                        $citas = new Cita;
+                        $citas = $row;
+                        ?>
+                <div class="d-flex justify-content-around shadow p-4 mb-5 bg-body rounded align-items-cente">
+                    <p>Duracion: <br><?php echo $citas->duracion; ?></p>
+                    <p><?php 
+                        #echo $citas->cliente;
+                        foreach($this->clientes as $rowc){
+                            $cliente = new Cliente;
+                            $cliente = $rowc;
+                            if($cliente->documentoId == $citas->cliente){
+                                echo 'Cliente: <br>'.$cliente->nombres.' '.$cliente->apellidos;
+                            }
+                        }
+                        ?></p>
+                    <p><?php 
+                        #echo $citas->cliente;
+                        foreach($this->psicologos as $rowp){
+                            $psicologo = new Psicologo;
+                            $psicologo = $rowp;
+                            if($psicologo->documentoId == $citas->psicologo){
+                                echo 'Psicologo: <br>'.$psicologo->nombres.' '.$psicologo->apellidos;
+                            }
+                        }
+                        ?></p>
+                    <p>Fecha expedicion: <br><?php $fecha = explode(' ',$citas->fecha); echo $fecha[0] ?></p>
+                    <p>Observacion: <br><?php echo $citas->observacion ?></p>
+                </div>
+                    <?php } ?>
+            </div>
+        </div>
     </div>
-
+    
     <?php require 'views/footer.php' ?>
 </body>
 </html>
