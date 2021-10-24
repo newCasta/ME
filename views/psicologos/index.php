@@ -11,6 +11,7 @@
 
     <div id="main">
         <h1 class="center">Regsitrar usuario</h1>
+        <div class="center"><?php echo $this->mensaje ?></div>
         <form action="<?php echo constant('URL') ?>registrarpsicologo/registrarPsicologo" method="post" enctype="multipart/form-data">
             <p>
                 <label for="documentoid">Documento identidad</label>

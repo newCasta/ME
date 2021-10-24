@@ -21,6 +21,7 @@
                     <?php
                 }elseif($_SESSION['rol'] == 'psicologo'){
                     ?>
+            <li><a href="<?php echo constant('URL') ?>citas">Citas</a></li>
             <li><a href="<?php echo constant('URL') ?>programacion">Programar citas</a></li>
                     <?php
                 }

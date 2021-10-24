@@ -11,8 +11,27 @@
 
     <div id="main">
         <h1 class="center">agregar citas</h1>
-        <form action="<?php echo constant('URL') ?>rprogramacion/programarcitas" method="POST">
-            
+        <div class="center"><?php echo $this->mensaje ?></div>
+        <form action="<?php echo constant('URL') ?>programacion/programarcitas" method="POST">
+            <p>
+                <label for="fecha">Fecha y hora</label>
+                <input type="datetime" name="fecha" id="fecha" placeholder="aaaa-mm-dd h:m:s" required>
+            </p>
+            <p>
+                <label for="cliente">Cliente</label>
+                <select name="cliente" id="cliente">
+                    <?php
+                    foreach($this->clientes as $row){
+                        $cliente = new Cliente;
+                        $cliente = $row;
+                    ?>
+                    <option value="<?php echo $cliente->documentoId ?>"><?php echo $cliente->nombres .' '. $cliente->apellidos ?></option>
+                    <?php } ?>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Programar citas">
+            </p>
         </form>
     </div>
 

@@ -6,16 +6,8 @@ class Main extends Controller{
         #echo '<p>Nuevo controlador main</p>';
     }
 
-    function render(){
-        if(isset($_SESSION['rol'])){
-            if($_SESSION['rol'] == 'cliente'){       
-                $this->view->render('clienteapp/index');
-            }elseif($_SESSION['rol'] == 'psicologo'){
-                $this->view->render('psicologoapp/index');
-            }
-        }else{       
-            $this->view->render('main/index');
-        }
+    function render(){    
+        $this->view->render('main/index');
     }
 
     function logout(){

@@ -3,6 +3,7 @@
 class RegistrarCliente extends Controller{
     function __construct(){
         parent::__construct();
+        $this->view->mensaje = "";
         #echo '<p>Nuevo controlador main</p>';
     }
 
@@ -22,15 +23,23 @@ class RegistrarCliente extends Controller{
         $apellidos = $_POST['apellidos'];
         $telefono = $_POST['telefono'];
         $edad = $_POST['edad'];
+
+        $mensaje = "";
         if($this->model->insertDocumento(['documentoid' => $documentoid, 'fechaexp' => $fechaexp, 'fechaven' => $fechaven])){
             #echo "nuevo alumno";
+            if($this->model->insertUsuario(['documentoid' => $documentoid, 'usuario' => $usuario, 'password' => $password, 'correo' => $correo, 'tipo' => 'cliente'])){
+                #echo "nuevo alumno";
+            }
+            if($this->model->insertCliente(['documentoid' => $documentoid, 'nombres' => $nombres, 'apellidos' => $apellidos, 'telefono' => $telefono, 'edad' => $edad])){
+                #echo "nuevo alumno";
+            }
+            $mensaje = "Nuevo cliente registrado";
+        }else{
+            $mensaje = "El documento ya existe";
         }
-        if($this->model->insertUsuario(['documentoid' => $documentoid, 'usuario' => $usuario, 'password' => $password, 'correo' => $correo, 'tipo' => 'cliente'])){
-            #echo "nuevo alumno";
-        }
-        if($this->model->insertCliente(['documentoid' => $documentoid, 'nombres' => $nombres, 'apellidos' => $apellidos, 'telefono' => $telefono, 'edad' => $edad])){
-            #echo "nuevo alumno";
-        }
+
+        $this->view->mensaje = $mensaje;
+        $this->render();
     }
 }
 

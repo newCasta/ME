@@ -11,10 +11,11 @@
 
     <div id="main">
         <h1 class="center">Regsitrar usuario</h1>
+        <div class="center"><?php echo $this->mensaje ?></div>
         <form action="<?php echo constant('URL') ?>registrarcliente/registrarCliente" method="post">
             <p>
                 <label for="documentoid">Documento identidad</label>
-                <input type="text" name="documentoid" id="documentoid" required>
+                <input type="text" name="documentoid" id="documentoid" required maxlength="10">
             </p>
             <p>
                 <label for="fechaexp">Fecha expedicion</label>

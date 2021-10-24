@@ -13,7 +13,7 @@ class RegistrarClienteModel extends Model{
             $query->execute(['documentoid' => $datos['documentoid'], 'fechaExpedicion' => $datos['fechaexp'], 'fechaVencimiento' => $datos['fechaven']]);
             return true;
         }catch(PDOException $e){
-            echo "Ya esxiste este Documento";
+            #echo "Ya esxiste este Documento";
             return false;
         }       
     }
@@ -25,7 +25,7 @@ class RegistrarClienteModel extends Model{
             $query->execute(['documentoid' => $datos['documentoid'], 'usuario' => $datos['usuario'], 'password' => $datos['password'], 'correo' => $datos['correo'], 'tipo' => $datos['tipo']]);
             return true;
         }catch(PDOException $e){
-            echo "Ya esxiste este documento";
+            #echo "Ya esxiste este documento";
             return false;
         }       
     }
@@ -37,7 +37,7 @@ class RegistrarClienteModel extends Model{
             $query->execute(['documentoid' => $datos['documentoid'], 'nombres' => $datos['nombres'], 'apellidos' => $datos['apellidos'], 'telefono' => $datos['telefono'], 'edad' => $datos['edad']]);
             return true;
         }catch(PDOException $e){
-            echo "Ya esxiste esta matricula";
+            #echo "Ya esxiste esta matricula";
             return false;
         }       
     }
