@@ -13,15 +13,14 @@
         <h1 class="center"><?php
         echo $_SESSION['user'] .' tipo: '. $_SESSION['rol'];
         ?></h1>
-        <p>Unete al discord para dar las citas <a href="https://discord.gg/xnanWRrR4C">aqui</a></p>
         <?php
-        foreach($this->citasagregadas as $row){
-            $citas = new CitaAgregada;
+        foreach($this->citasobservadas as $row){
+            $citas = new Cita;
             $citas = $row;
         ?>
         <div class="center">
-            <p><?php echo $citas->fechexp; ?></p>
-            <p><?php echo $citas->fechrea; ?></p>
+            <p><?php echo $citas->idcitaprogramada; ?></p>
+            <p><?php echo $citas->duracion; ?></p>
             <p><?php 
                 #echo $citas->cliente;
                 foreach($this->clientes as $rowc){
@@ -42,10 +41,10 @@
                     }
                 }
                 ?></p>
-            <p><a href="<?php echo constant('URL').'observacion?idcita='.$citas->idcitas; ?>">Observacion</a></p>
+            <p><?php $fecha = explode(' ',$citas->fecha); echo $fecha[0] ?></p>
+            <p><?php echo $citas->observacion ?></p>
         </div>
         <?php } ?>
-        <p>Mirar citas observadas <a href="<?php echo constant('URL')?>citasrealizadas">aqui</a></p>
     </div>
 
     <?php require 'views/footer.php' ?>
