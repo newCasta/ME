@@ -3,6 +3,8 @@
 class Login extends Controller{
     function __construct(){
         parent::__construct();
+        $this->view->mensaje = "";
+        $this->view->error = "";
         #echo '<p>Nuevo controlador main</p>';
     }
 
@@ -17,7 +19,14 @@ class Login extends Controller{
     function ingresar(){
         $user = $_POST['user'];
         $pass = $_POST['pass'];
-        $this->model->validar(['user' => $user, 'pass' => $pass]);
+
+        if($this->model->validar(['user' => $user, 'pass' => $pass])){
+            $this->view->mensaje = "Ingresate correctamente";
+        }else{
+            $this->view->error = "Usuario o contraseña incorrectos";
+        }
+        
+        $this->render();
     }
 }
 

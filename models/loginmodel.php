@@ -20,10 +20,10 @@ class LoginModel extends Model{
                 $_SESSION['user'] = $row[1];
                 $_SESSION['correo'] = $row[3];
                 $_SESSION['rol'] = $row[4];
-                echo 'has iniciado sesion';
+                #echo 'has iniciado sesion';
                 return true;
             }else{
-                echo 'usuario o contraseña incorrecta';
+                #echo 'usuario o contraseña incorrecta';
                 return false;
             }
         }catch(PDOException $e){

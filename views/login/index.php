@@ -12,7 +12,27 @@
     <div class="container">
         <div class="row p-5 justify-content-center">
             <div class="col-sm-3">
-                <h1 class="pb-5">Ingresar</h1>
+                <h1 class="mb-5">Ingresar</h1>
+                <?php
+                if($this->mensaje != ""){
+                ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Bien!</strong> <?php echo $this->error ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
+                }
+                ?>
+                <?php
+                if($this->error != ""){
+                ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error!</strong> <?php echo $this->error ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
+                }
+                ?>
                 <form action="<?php echo constant('URL') ?>login/ingresar" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="user" class="form-label">Usuario</label>
