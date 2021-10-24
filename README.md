@@ -1,0 +1,1 @@
+Es un proyecto de escuela para una aplicacion de psicologia
