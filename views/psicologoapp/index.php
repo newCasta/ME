@@ -24,8 +24,8 @@
                     $citas = $row;
                     $fecha = explode(' ', $citas->fechrea);
                 ?>
-                <div class="d-flex justify-content-around shadow p-4 mb-5 bg-body rounded-lg align-items-center">
-                    <p>Fecha expedicion: <br><?php echo $citas->fechexp; ?></p>
+                <div class="d-flex justify-content-around shadow p-4 mb-5 bg-body rounded-3 text-center align-items-center border">
+                    <p>Fecha expedicion: <br><?php echo explode(' ',$citas->fechexp)[0]; ?></p>
                     <p>Fecha realizacion: <br><?php echo $fecha[0] ?></p>
                     <p>Hora: <br><?php echo $fecha[1] ?></p>
                     <p><?php 

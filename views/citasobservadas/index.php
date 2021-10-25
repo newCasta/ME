@@ -21,7 +21,7 @@
                         $citas = new Cita;
                         $citas = $row;
                         ?>
-                <div class="d-flex justify-content-around shadow p-4 mb-5 bg-body rounded align-items-cente">
+                <div class="d-flex justify-content-around shadow p-4 mb-5 bg-body rounded-3 text-center align-items-center border">
                     <p>Duracion: <br><?php echo $citas->duracion; ?></p>
                     <p><?php 
                         #echo $citas->cliente;

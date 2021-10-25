@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row p-5">
             <div class="col-sm-12">
-                <h1 class="center">Ayuda</h1>
+                <h1 class="center">Contactanos</h1>
             </div>
         </div>
     </div>
