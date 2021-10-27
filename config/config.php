@@ -5,7 +5,7 @@ define('URL', 'http://localhost/ME/');
 define('HOST', 'localhost');
 define('DB', 'me');
 define('USER', 'root');
-define('PASSWORD', "Wh5*2cmDbSjV");
+define('PASSWORD', "");
 define('CHARSET', 'utf8mb4');
 
 ?>
