@@ -10,7 +10,7 @@
 
     <div class="container">
         <div class="row p-5">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <h1>Citas con observacion</h1>
             </div>
         </div>

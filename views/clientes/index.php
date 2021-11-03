@@ -56,7 +56,7 @@
                         <label for="edad" class="form-label">Edad</label>
                         <input type="text" name="edad" id="edad" required class="form-control">
                     </div>
-                    <input type="submit" value="Registrar" class="btn btn-primary">
+                    <input type="submit" value="Registrar Cliente" class="btn btn-primary">
                 </form>
             </div>
         </div>

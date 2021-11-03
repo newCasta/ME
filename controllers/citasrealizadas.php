@@ -21,6 +21,8 @@ class CitasRealizadas extends Controller{
         if(isset($_SESSION['rol'])){
             if($_SESSION['rol'] == 'psicologo'){
                 $this->view->render('citasobservadas/index');
+            }else if($_SESSION['rol'] == 'cliente'){
+                $this->view->render('citasobservadas/index');
             }else{
                 header('location: '. constant('URL'));
             }

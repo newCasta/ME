@@ -56,7 +56,7 @@
                         <label for="hojavida" class="form-label">Hoja de vida (PDF)</label>
                         <input type="file" name="hojavida" id="hojavida" required class="form-control">
                     </div>
-                    <input type="submit" value="Registrar" class="btn btn-primary">
+                    <input type="submit" value="Registrar Psicólogo" class="btn btn-primary">
                 </form>
             </div>
         </div>

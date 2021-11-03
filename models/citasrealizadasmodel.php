@@ -59,7 +59,7 @@ class CitasRealizadasModel extends Model{
         $id = $_SESSION['id'];
 
         try{
-            $query = $this->db->connect()->query("SELECT * FROM citas WHERE idPsicologo = $id");
+            $query = $this->db->connect()->query("SELECT * FROM citas WHERE (idCliente = $id OR idPsicologo = $id)");
             while($row = $query->fetch()){
                 $item = new Cita;
                 $item->idcita = $row[0];

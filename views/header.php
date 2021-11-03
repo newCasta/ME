@@ -25,6 +25,7 @@
                     if($_SESSION['rol'] == 'cliente'){
                         ?>
                     <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>citas">Citas</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="<?php echo constant('URL') ?>pagos">Pagos</a></li>
                     <?php
                     }elseif($_SESSION['rol'] == 'psicologo'){
                         ?>
