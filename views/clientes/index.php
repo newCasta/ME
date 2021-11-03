@@ -8,11 +8,12 @@
 </head>
 <body>
     <?php require 'views/header.php' ?>
-
+    
     <div class="container">
         <div class="row p-5 justify-content-center">
             <div class="col-sm-4">
-                <h1 class="mb-5">Regsitrar cliente</h1>
+                <h1 class="mb-5">Registrar cliente</h1>
+                <p>Eres un psicólogo registrate <a href="<?php echo constant('URL') ?>registrarpsicologo">aquí</a></p>
                 <div class="center"><?php echo $this->mensaje ?></div>
                 <form action="<?php echo constant('URL') ?>registrarcliente/registrarCliente" method="post">
                     <div class="mb-3">
@@ -20,7 +21,7 @@
                         <input type="text" name="documentoid" id="documentoid" required maxlength="10" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="fechaexp" class="form-label">Fecha expedicion</label>
+                        <label for="fechaexp" class="form-label">Fecha expedición</label>
                         <input type="date" name="fechaexp" id="fechaexp" required class="form-control">
                     </div>
                     <div class="mb-3">
@@ -48,14 +49,13 @@
                         <input type="text" name="apellidos" id="apellidos" required class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label for="telefono" class="form-label">Telefono</label>
+                        <label for="telefono" class="form-label">Teléfono</label>
                         <input type="text" name="telefono" id="telefono" required class="form-control">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-5">
                         <label for="edad" class="form-label">Edad</label>
                         <input type="text" name="edad" id="edad" required class="form-control">
                     </div>
-                    <p>Eres un psicologo registrate <a href="<?php echo constant('URL') ?>registrarpsicologo">aqui</a></p>
                     <input type="submit" value="Registrar" class="btn btn-primary">
                 </form>
             </div>
