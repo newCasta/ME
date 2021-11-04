@@ -10,9 +10,25 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark p-0 flex-column" style="background-color: #174982;">
-            <a class="navbar-brand" href="<?php echo constant('URL') ?>main">
+            <div class="d-flex flex-row align-items-center">
                 <img src="<?php echo constant('URL') ?>public/img/ME.png" alt="" width="100">
-            </a>
+                <?php
+                if(isset($_SESSION['rol'])){
+                ?>
+                <p class="fs-2 text-light m-0">| <?php echo $_SESSION['user'] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <?php
+                if(isset($_SESSION['rol'])){
+                ?>
+                <p class="fs-5 text-white-50 text-capitalize"><?php echo $_SESSION['rol'] ?></p>
+                <?php
+                }
+                ?>
+            </div>
             <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

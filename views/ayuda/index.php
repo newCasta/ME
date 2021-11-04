@@ -10,15 +10,15 @@
     <?php require 'views/header.php' ?>
 
     <div class="container">
-        <div class="row p-5">
+        <div class="row p-5 d-flex justify-content-center">
             <div class="col-sm-12 text-center">
                 <h1 class="center">Contactanos</h1>
-                <p class="fs-4 mt-5">Puedes contactarnos por las siguientes opciones</p>
+                <p class="fs-4 mt-5">Puedes contactarnos por las siguientes opciones:</p>
             </div>
-            <div class="col-sm-12 text-center mt-4">
-                <p class="fs-4"><a href="https://www.facebook.com/Me-102125648942322" class="text-decoration-none">Facebook <i class="fab fa-facebook"></i></a></p>
-                <p class="fs-4"><a href="https://www.instagram.com/meoficial2021/" class="text-decoration-none" style="color: salmon;">Instagram <i class="fab fa-instagram"></i></a></p>
-                <p class="fs-4 text-danger">Gmail meoficial40@gmail.com</p>
+            <div class="col-sm-4 text-center mt-4">
+                <p class="fs-4"><a href="https://www.facebook.com/Me-102125648942322" class="text-decoration-none"><i class="fab fa-facebook"></i> ME</a></p>
+                <p class="fs-4"><a href="https://www.instagram.com/meoficial2021/" class="text-decoration-none" style="color: salmon;"><i class="fab fa-instagram"></i> @meoficial2021</a></p>
+                <p class="fs-4 text-danger"><i class="far fa-envelope"></i> meoficial40@gmail.com</p>
             </div>
         </div>
     </div>

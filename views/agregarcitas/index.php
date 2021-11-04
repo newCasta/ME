@@ -11,7 +11,7 @@
 
     <div class="container">
         <div class="row p-5 justify-content-center">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <h1 class="mb-5">Programar citas</h1>
                 <div class=""><?php echo $this->mensaje ?></div>
                 <form action="<?php echo constant('URL') ?>programacion/programarcitas" method="POST">
