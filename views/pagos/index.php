@@ -13,7 +13,7 @@
         <div class="row p-5 justify-content-center">
             <div class="col-sm-10 text-center">
                 <h1>Pagos</h1>
-                <p class="fs-4 mt-5">Para realizar los pagos haz la transacción al nuestro nequi (+57) 301 7755724 o puedes escanear nuestro codigo QR</p>
+                <p class="fs-4 mt-5">Para realizar los pagos haz la transacción al nuestro NEQUI (+57) 301 7755724 o puedes escanear nuestro codigo QR</p>
             </div>
         </div>
         <div class="row justify-content-center">
