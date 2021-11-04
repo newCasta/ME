@@ -59,7 +59,7 @@ class CitasModel extends Model{
         $id = $_SESSION['id'];
 
         try{
-            $query = $this->db->connect()->query("SELECT * FROM programacion_citas WHERE observada = 'no' AND (idCliente = $id OR idPsicologo = $id)");
+            $query = $this->db->connect()->query("SELECT * FROM programacion_citas WHERE observada = 'no' AND (idCliente = $id OR idPsicologo = $id) ORDER BY fechaRealizacion");
             while($row = $query->fetch()){
                 $item = new CitaAgregada;
                 $item->idcitas = $row[0];

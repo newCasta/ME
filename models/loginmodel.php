@@ -38,10 +38,10 @@ class LoginModel extends Model{
                     header('location: '. constant('URL'));
                 break;
                 case 'cliente':
-                    header('location: '. constant('URL'));
+                    header('location: '. constant('URL').'citas');
                 break;
                 case 'psicologo':
-                    header('location: '. constant('URL'));
+                    header('location: '. constant('URL').'citas');
                 break;
             }
         }else{

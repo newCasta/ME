@@ -11,9 +11,9 @@
 
     <div class="container h-100">
         <div class="row p-5 justify-content-center">
-            <div class="col-sm-8">
+            <div class="col-sm-8  text-center">
                 <h1>Somos ME</h1>
-                <p class="fs-5 mt-5">Es un proyecto el cual busca ser tu mano amiga en todo momento que nesesites de nosotros y el cual quiere fomentar la importancia de la salud mental.</p>
+                <p class="fs-4 mt-5">Es un proyecto el cual busca ser tu mano amiga en todo momento que nesesites de nosotros y el cual quiere fomentar la importancia de la salud mental.</p>
             </div>
         </div>
     </div>

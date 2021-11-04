@@ -13,7 +13,7 @@
         <div class="row p-5">
             <div class="col-sm-12">
                 <h1 class="mb-5">Citas programadas</h1>
-                <p>Unete al discord para ver las citas <a href="https://discord.gg/xnanWRrR4C">aqui</a>  |  Mirar citas observadas <a href="<?php echo constant('URL')?>citasrealizadas">aqui</a></p>
+                <p class="fs-4">Unete al discord para ver las citas <a href="https://discord.gg/y7AegjrWsy">aqui</a>  |  Mirar citas observadas <a href="<?php echo constant('URL')?>citasrealizadas">aqui</a></p>
             </div>
         </div>
         <div class="row">

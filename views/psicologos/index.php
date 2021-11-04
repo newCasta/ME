@@ -13,7 +13,7 @@
         <div class="row p-5 justify-content-center">
             <div class="col-sm-4">
                 <h1 class="mb-5">Registrar psicólogo</h1>
-                <p>Eres un cliente registrate <a href="<?php echo constant('URL') ?>registrarcliente">aquí</a></p>
+                <p class="fs-4">Eres un cliente registrate <a href="<?php echo constant('URL') ?>registrarcliente">aquí</a></p>
                 <div class="center"><?php echo $this->mensaje ?></div>
                 <form action="<?php echo constant('URL') ?>registrarpsicologo/registrarPsicologo" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
