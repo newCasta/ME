@@ -1,6 +1,6 @@
 <?php
 
-define('URL', 'http://localhost/ME/');
+define('URL', 'http://https://somosme.herokuapp.com/');
 
 define('HOST', 'localhost');
 define('DB', 'me');
